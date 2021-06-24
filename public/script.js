@@ -107,6 +107,9 @@ fetch("/stations")
         } else{
           backToCenter();
           this.parentNode.classList.remove('active');
+          var popUps = document.getElementsByClassName('mapboxgl-popup');
+          /** Check if there is already a popup on the map and if so, remove it */
+          if (popUps[0]) popUps[0].remove();
         }
         
         
